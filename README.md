@@ -19,4 +19,5 @@ Breakpoint change at 768px
 
 - Chrome (latest)
 - Firefox (v46)
+- IE9
 - Safari for Mac (latest)
