@@ -1,0 +1,84 @@
+//////////////////////////////
+// Hamburger Icon
+//////////////////////////////
+
+.hamburger {
+    @include transition-property(opacity, filter);
+    @include transition-duration(0.15s);
+    @include transition-timing-function(linear);
+    display: inline-block;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible; 
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &__box {
+        width: 40px;
+        height: 24px;
+        display: inline-block;
+        position: relative;
+    }
+
+    &__inner, &__inner::before, &__inner::after {
+        @include border-radius(4px);
+        @include transition-property(transform);
+        @include transition-duration(0.15s);
+        @include transition-timing-function(ease);
+        width: 40px;
+        height: 4px;
+        background-color: $white;
+        position: absolute;
+    }
+    &__inner {
+        @include transition-duration(0.1s);
+        @include transition-timing-function(cubic-bezier(0.55, 0.055, 0.675, 0.19));
+        display: block;
+        top: 50%;
+        margin-top: -2px;
+    }
+    &__inner::before, &__inner::after {
+        content: "";
+        display: block;
+    }
+    &__inner::before {
+        @include transition(top 0.1s 0.14s ease, opacity 0.1s ease);
+        top: -10px;
+    }
+    &__inner::after {
+        @include transition(bottom 0.1s 0.14s ease, transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19));
+        bottom: -10px;
+    }
+
+    // When clicked
+    &.is-active {
+        .hamburger__inner {
+            @include transform(rotate(45deg));
+            @include transition-delay(0.14s);
+            @include transition-timing-function(cubic-bezier(0.215, 0.61, 0.355, 1));
+
+            &::before {
+                @include transition(top 0.1s ease, opacity 0.1s 0.14s ease);
+                top: 0;
+                opacity: 0;
+            }
+
+            &::after {
+                @include transform(rotate(-90deg));
+                @include transition(bottom 0.1s ease, transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1));
+                bottom: 0;
+            }
+        }
+    }
+
+    @include breakpoint($desktop) {
+        display: none;
+    }
+}

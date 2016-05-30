@@ -1,0 +1,12 @@
+{
+  "name": "demo-css",
+  "author": "Diogo Silva",
+  "private": true,
+  "version": "0.0.1",
+  "devDependencies": {
+      "grunt": "~0.4.5",
+      "grunt-contrib-compass": "^1.0.4",
+      "grunt-contrib-clean": "^0.6.0",
+      "grunt-contrib-watch": "^0.6.1"
+  }
+}

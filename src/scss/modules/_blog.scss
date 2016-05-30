@@ -1,0 +1,78 @@
+//////////////////////////////
+// Blog
+//////////////////////////////
+
+.blog {
+
+    &-article {
+        &__meta {
+            font-size: em(12.5px);
+            margin: -0.75em 0 1em;
+        }
+
+        &__hero {
+            display: block;
+            margin-bottom: 1.5em;
+            width: 100%;
+        }
+
+        &__body {
+            
+            @include breakpoint(max-width $phoneMaxWidth) { // Swap the order of inner elements on supported
+                /* IE 10 */
+                @include flexbox((
+                    display: flexbox,
+                    flex-direction: column
+                ), $version: 2);
+                /* Modern */
+                @include flexbox((
+                    display: flex,
+                    flex-direction: column
+                ));
+            }
+        }
+
+        &__content {
+            @include breakpoint(max-width $phoneMaxWidth) {
+                order: 1;
+            }
+        }
+
+        &__more {
+            background-color: $grey--gallery;
+            padding: 1em;
+
+            @include breakpoint(max-width $phoneMaxWidth) {
+                order: 2;
+            }
+
+            @include breakpoint($desktop) {
+                float: right;
+                margin: 0 0 em($vertical-gap) em($vertical-gap);
+                max-width: em(260px);
+                min-width: em(180px)
+            }
+
+            &__item {
+                font-size: em(13.5px);
+                list-style: disc inside;
+            }
+        }
+
+        @include breakpoint($desktop) {
+            @include col(8);
+        }
+    }
+    &-related {
+        @include col(4);
+        @include omega;
+
+        @include breakpoint(max-width $phoneMaxWidth) {
+            display: none;
+        }
+
+        &__item {
+            margin-bottom: em($vertical-gap);
+        }
+    }
+}

@@ -1,0 +1,32 @@
+
+@function em($target, $context: $base-font-size + 0px) {
+  @if $target == 0 { @return 0 }
+  @return $target / $context + 0em;
+}
+
+@function rem($target, $context: 10px) {
+  @if $target == 0 { @return 0 }
+  @return $target / $context + 0rem;
+}
+
+@function calc-percent($target, $context: $base-font-size) {
+    @if $target == 0 { @return 0 }
+    @return $target / $context * 100%;
+}
+
+// GRID SYSTEM
+@function columns($columns, $container-columns: $maximum-columns, $gutter: $gutter-width) {
+    $width: $columns * $column-width + ($columns - 1) * $gutter;
+    $container-width: $container-columns * $column-width + ($container-columns - 1) * $gutter;
+    @return percentage($width / $container-width);
+}
+
+@function gutter($container-columns: $maximum-columns, $gutter: $gutter-width) {
+    $container-width: $container-columns * $column-width + ($container-columns - 1) * $gutter;
+    @return percentage($gutter / $container-width);
+}
+
+@function offset-columns($columns, $gutter: $gutter-width) {
+  $margin: $columns * $column-width + $columns * $gutter-width;
+  @return $margin;
+}

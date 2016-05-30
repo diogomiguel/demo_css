@@ -1,0 +1,63 @@
+//////////////////////////////
+// General Typography elements
+//////////////////////////////
+
+html { font-size: 62.5%; } 
+body {
+    color: $black;
+    font-family: $main-font-family;
+}
+
+h1 {
+    font-size: em(20px);
+    font-weight: 700;
+    margin: 0 0 0.5em;
+}
+
+h2 {
+    font-size: em(18px);
+    font-weight: 700;
+    margin: 0 0 0.5em;
+}
+
+h3 {
+    font-size: em(16px);
+    margin: 0 0 0.5em;
+}
+
+p, legend{
+    font-size: em(15px);
+    margin: 0 0 1em;
+}
+ul, ol {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+strong {
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+    font-weight: 500;
+}
+
+a {
+    @include link-transition;
+    color: $red--torch;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+p em {
+    color: inherit;
+}

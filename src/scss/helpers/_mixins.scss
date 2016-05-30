@@ -1,0 +1,108 @@
+//////////////////////////////
+// Flow / Layout
+//////////////////////////////
+
+//Grid Mixins & Container Placeholder
+@mixin col($columns, $omega:false, $maximum-columns:$maximum-columns, $gutter: $gutter-width) {  
+    width: columns($columns, $maximum-columns, $gutter); 
+
+    @if $omega == omega {
+        float: right;
+    }  
+    @else if $omega == 'none'{
+        margin-right: gutter($maximum-columns, $gutter);
+    }
+    @else{
+        margin-right: gutter($maximum-columns, $gutter);
+        float: left;
+    }
+}
+
+@mixin omega {
+    float: right;
+    margin-right: 0;
+}
+
+@mixin push($from-direction, $columns) {
+    @if $from-direction == left {
+        margin-left: offset-columns($columns);
+    }
+    @if $from-direction == right {
+        margin-right: offset-columns($columns);
+    }
+}
+
+@mixin container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin border-box {
+    @include box-sizing(border-box);
+}
+
+@mixin clear-me {
+    content:"";
+    clear: both;
+    display: table;
+}
+
+@mixin header-offset($property, $modifier: 1) {
+    #{$property}: $header_height--pP * $modifier;
+
+    @include breakpoint($phoneInbetween) {
+        #{$property}: $header_height--pI * $modifier;
+    }
+
+    @include breakpoint($phoneLandscape) {
+        #{$property}: $header_height--pL * $modifier;
+    }
+
+    @include breakpoint($tabletPortrait) {
+        #{$property}: $header_height--tP  * $modifier * $fontsize__container--tP;
+    }
+
+    @include breakpoint($medium) {
+        #{$property}: $header_height--tP  * $modifier * $fontsize__container--m;
+    }
+}
+
+//////////////////////////////
+// Font
+//////////////////////////////
+
+@mixin ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+//////////////////////////////
+// Style
+//////////////////////////////
+
+@mixin remove-ie-gradient {
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(enabled=false)";
+    filter: none;
+}
+
+@mixin align-transform($type) {  
+    @if $type == 'center-middle' {
+        @include transform(translate(-50%, -50%));
+        left: 50%;
+        top: 50%;
+    }  
+    @else if $type == 'middle'{
+        @include transform(translateY(-50%));
+        top: 50%;
+    }
+    @else{
+        @include transform(translateX(-50%));
+        left: 50%;
+    }
+}
+
+@mixin link-transition {
+    @include transition-property(background-color, background-image, transform, filter-gradient, color, opacity, text-shadow, border-color);
+    @include transition-duration(.5s);
+}

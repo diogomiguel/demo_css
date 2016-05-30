@@ -1,0 +1,42 @@
+//////////////////////////////
+// General
+//////////////////////////////
+
+// Paths
+$images-path: '../images/';
+
+// Colors
+$black: #000;
+$blue: #247BA0;
+$green--flower: #B2DBBF;
+$green--mint: #F3FFBD;
+$green--wind: #70C1B3;
+$grey--gallery: #eee;
+$grey--smoke: #151517;
+$red--torch: #FF1654;
+$white: #fff;
+
+$sans-serif: Verdana,Arial,sans-serif;
+$main-font-family: $sans-serif;
+$font-awesome: 'FontAwesome';
+
+$maximum-columns: 12;
+$gutter-width: 2.12766%;
+$column-width: 6.38298%;
+
+@import "helpers/functions";
+
+$medium-width: 960px;
+
+// Breakpoints
+$phone: em(320px, 16px);
+$phoneMaxWidth: em(767px, 16px);
+$desktop: em(768px, 16px);
+
+$base-font-size: 10;
+
+//////////////////////////////
+// Other Dimensions
+//////////////////////////////
+
+$vertical-gap: 10px;

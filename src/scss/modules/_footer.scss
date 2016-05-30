@@ -1,0 +1,16 @@
+//////////////////////////////
+// Main Footer
+//////////////////////////////
+
+.main-footer {
+    background-color: $grey--smoke;
+    color: $white;
+    padding: 1em $gutter-width * 2;
+    text-align: center;
+    p {
+        color: inherit;
+        font-size: em(12.5px);
+        margin: 0;
+        padding: 1em;
+    }
+}

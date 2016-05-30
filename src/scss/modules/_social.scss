@@ -1,0 +1,58 @@
+//////////////////////////////
+// Social icons
+//////////////////////////////
+
+.social {
+
+    @include breakpoint($desktop) {
+        min-width: em(120px);
+        position: fixed;
+        text-align: right;
+        top: 2.5em;
+        right: $gutter-width * 1.5;
+    }
+
+    &__item {
+
+        &__link {
+
+            font-size: 0;
+            padding-right: $gutter-width * 2;
+
+
+            @include breakpoint($desktop) {
+                padding-right: $gutter-width * 4;
+            } 
+
+            &:last-child {
+                padding-right: 0;
+            }
+
+            &::before {
+                @include link-transition;
+                @include fa-icon();
+                color: $white;
+                font-size: 3rem;
+
+                @include breakpoint($desktop) {
+                    font-size: 2.5rem;
+                }
+            }
+
+            &--fb::before {
+                content: $fa-var-facebook;
+            }
+            &--twitter::before {
+                content: $fa-var-twitter;
+            }
+            &--plus::before {
+                content: $fa-var-google-plus;
+            }
+
+            &:hover::before {
+                @include transform(scale(1.2, 1.2));
+                color: $red--torch;
+            }
+        }
+    }
+}

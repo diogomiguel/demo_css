@@ -1,0 +1,154 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Demo CSS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="wrapper">
+            <!-- HEADER -->
+            <header class="main-header" role="banner">
+                <button class="hamburger" type="button" aria-label="Menu" aria-controls="js-nav" id="js-btn-nav-trigger">
+                    <span class="hamburger__box">
+                        <span class="hamburger__inner"></span>
+                    </span>
+                </button>
+
+                <h2 class="main-header__logo">
+                    <a href="#">Love Ipsum</a>
+                </h2>
+
+                <nav class="main-navbar" id="js-nav">
+                    <ul>
+                        <li class="main-navbar__link">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="main-navbar__link">
+                            <a href="#">eBooks</a>
+                        </li>
+                        <li class="main-navbar__link">
+                            <a href="#">Magazines</a>
+                        </li>
+                        <li class="main-navbar__link">
+                            <a href="#">Movies</a>
+                        </li>
+                        <li class="main-navbar__link">
+                            <a href="#">Help</a>
+                        </li>
+                        <li class="main-navbar__link">
+                            <a href="#">Login</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- MAIN -->
+            <main class="content" role="main">
+                <article class="blog-article">
+                    <header>
+                        <h1 class="blog-article__title" id="article-title">Lorem Ipsum Dolor Sit</h1>
+                        <p class="blog-article__meta">
+                            posted on <time class="blog-article__date">15 May 2015</time> by <a href="#" rel="author">John</a>
+                        </p>
+                    </header>
+
+                    <img src="http://placehold.it/1024x768" alt="Lorem Ipsum" aria-labelledby="article-title" aria-describedby="article-content" class="blog-article__hero">
+
+                    <div class="blog-article__body">
+
+                        <aside class="blog-article__more">
+                            <h3>More...</h3>
+                            <ul class="blog-article__more__list">
+                                <li class="blog-article__more__item"><a href="#">Link #1</a></li>
+                                <li class="blog-article__more__item"><a href="#">Another Link</a></li>
+                                <li class="blog-article__more__item"><a href="#">Third Link</a></li>
+                            </ul>
+                        </aside>
+
+                        <div class="blog-article__content" id="article-content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer
+
+                                adipiscing elit. Etiam fermentum. Integer
+
+                                fringilla. Integer fringilla. Pellentesque ac
+
+                                turpis. Sed elementum, felis quis porttitor
+
+                                sollicitudin, augue nulla sodales sapien,
+
+                                amet posuere quam purus at lacus. Nam id neque. Morbi
+
+                                pulvinar nulla sit amet nisl. Etiam pharetra lacus sed velit
+
+                                imperdiet bibendum.
+                            </p>
+
+                            <p>
+                                Sed quis elit. In hac habitasse platea dictumst. Maecenas
+
+                                justo. Donec interdum vestibulum libero. Nam laoreet dui sed
+
+                                magna. Nam consectetuer mollis dolor. Aenean ligula.
+
+                                Aliquam sed erat. Donec interdum vestibulum libero. Mauris
+
+                                et dolor.
+                            </p>
+                        </div>
+                    </div>
+                    
+                </article>
+
+                <aside class="blog-related">
+                    <ul>
+                        <li class="blog-related__item">
+                            <a href="#" class="blog-related__item__link">
+                                <h3 class="blog-related__item__title" id="blog-title-snoopsetting">A guide to snoopsetting</h3>
+                                <img src="http://placehold.it/300x300" class="blog-related__item__thumb" aria-labelledby="blog-title-snoopsetting">
+                            </a>
+                        </li>
+                        <li class="blog-related__item">
+                            <a href="#" class="blog-related__item__link">
+                                <h3 class="blog-related__item__title" id="blog-title-surveillance">Welcome to the Surveillance State</h3>
+                                <img src="http://placehold.it/300x300" class="blog-related__item__thumb" aria-labelledby="blog-title-surveillance">
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+            </main>
+
+
+            <!-- FOOTER -->
+            <footer class="main-footer" role="contentinfo">
+                <!-- SOCIAL -->
+                <div class="social">
+                    <ul>
+                        <li class="social__item">
+                            <a href="#" class="social__item__link social__item__link--fb">Facebook</a>
+                            <a href="#" class="social__item__link social__item__link--twitter">Twitter</a>
+                            <a href="#" class="social__item__link social__item__link--plus">Google Plus</a>
+                        </li>
+                    </ul>
+                </div>
+                <p>Developed by <a href="http://diogomiguelsilva.com" target="_blank">Diogo Silva</a></p>
+            </footer>
+        </div>
+
+        <script src="js/main.js"></script>
+        <script>
+            demoCss.nav.init();
+        </script>
+    </body>
+</html>

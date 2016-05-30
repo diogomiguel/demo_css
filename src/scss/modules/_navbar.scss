@@ -1,0 +1,55 @@
+//////////////////////////////
+// Main Navbar
+//////////////////////////////
+
+.main-navbar {
+    color: $white;
+    font-size: em(15px);
+    
+    @include breakpoint(max-width $phoneMaxWidth) {
+        @include transition(max-height, opacity, 0.75s, ease-out);
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        position: relative;
+
+        &.is-active {
+            max-height: em(400px, 15px);
+            opacity: 1;
+        }
+    }
+
+    @include breakpoint($desktop) {
+        padding: 1em 0;
+    }
+
+    &__link {
+    
+        @include breakpoint($desktop) {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        > a {
+            background-color: rgba($blue, 0.9);
+            color: inherit;
+            display: block;
+            line-height: 1;
+            
+            &:hover {
+                background-color: rgba($green--wind, 0.9);
+            }
+
+            @include breakpoint(max-width $phoneMaxWidth) {
+                border-bottom: 1px solid $white;
+                padding: 1em 0;
+                text-align: center;
+            }
+
+            @include breakpoint($desktop) {
+                @include border-radius(5px);
+                padding: 0.5em 1em;
+            }
+        }
+    }
+}

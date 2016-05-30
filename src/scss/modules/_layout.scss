@@ -1,0 +1,40 @@
+//////////////////////////////
+// Core Layout
+//////////////////////////////
+
+
+*, *:after, *:before { @include border-box; }
+
+html {
+}
+
+body {
+    background-color: $grey--gallery;
+
+    @include breakpoint($desktop) {
+        font-size: 1.1em;
+    }
+}
+
+.content {
+    background-color: $white;
+    margin: 0 auto;
+    max-width: em(960px);
+    padding: 0 $gutter-width em(15px);
+
+    @include breakpoint(max-width $phoneMaxWidth) {
+        padding-top: em(57.5px + $vertical-gap); // Header height plus some offset
+
+    }
+    @include breakpoint($desktop) {
+        padding-top: em(116px + $vertical-gap); // Header height plus some offset
+    }
+
+    &:after {
+        @include clear-me;
+    }
+}
+
+img {
+    max-width: 100%;
+}
