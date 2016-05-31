@@ -18,7 +18,7 @@
 
         <div class="wrapper">
             <!-- HEADER -->
-            <header class="main-header" role="banner">
+            <header class="main-header">
                 <button class="hamburger" type="button" aria-label="Menu" aria-controls="js-nav" id="js-btn-nav-trigger">
                     <span class="hamburger__box">
                         <span class="hamburger__inner"></span>
@@ -54,12 +54,12 @@
             </header>
 
             <!-- MAIN -->
-            <main class="content" role="main">
-                <article class="blog-article">
+            <main class="content">
+                <article class="blog-article h-entry">
                     <header>
-                        <h1 class="blog-article__title" id="article-title">Lorem Ipsum Dolor Sit</h1>
+                        <h1 class="blog-article__title p-name" id="article-title">Lorem Ipsum Dolor Sit</h1>
                         <p class="blog-article__meta">
-                            posted on <time class="blog-article__date">15 May 2015</time> by <a href="#" rel="author">John</a>
+                            posted on <time class="blog-article__date dt-published" datetime="2015-05-15">15 May 2015</time> by <a href="#" rel="author" class="p-author h-card">John</a>
                         </p>
                     </header>
 
@@ -76,7 +76,7 @@
                             </ul>
                         </aside>
 
-                        <div class="blog-article__content" id="article-content">
+                        <div class="blog-article__content e-content" id="article-content">
                             <p>
                                 Lorem ipsum dolor sit amet, consectetuer
 
@@ -116,13 +116,13 @@
                         <li class="blog-related__item">
                             <a href="#" class="blog-related__item__link">
                                 <h3 class="blog-related__item__title" id="blog-title-snoopsetting">A guide to snoopsetting</h3>
-                                <img src="http://placehold.it/300x300" class="blog-related__item__thumb" aria-labelledby="blog-title-snoopsetting">
+                                <img src="http://placehold.it/300x300" alt="Snoopsetting" class="blog-related__item__thumb" aria-labelledby="blog-title-snoopsetting">
                             </a>
                         </li>
                         <li class="blog-related__item">
                             <a href="#" class="blog-related__item__link">
                                 <h3 class="blog-related__item__title" id="blog-title-surveillance">Welcome to the Surveillance State</h3>
-                                <img src="http://placehold.it/300x300" class="blog-related__item__thumb" aria-labelledby="blog-title-surveillance">
+                                <img src="http://placehold.it/300x300" alt="Welcome Surveillance" class="blog-related__item__thumb" aria-labelledby="blog-title-surveillance">
                             </a>
                         </li>
                     </ul>
@@ -131,7 +131,7 @@
 
 
             <!-- FOOTER -->
-            <footer class="main-footer" role="contentinfo">
+            <footer class="main-footer">
                 <!-- SOCIAL -->
                 <div class="social">
                     <ul>
